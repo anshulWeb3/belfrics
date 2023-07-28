@@ -7,6 +7,7 @@ import "google/api/annotations.proto";
 import "cosmos/base/query/v1beta1/pagination.proto";
 import "belfrics/belfrics/params.proto";
 import "belfrics/belfrics/kyc.proto";
+import "belfrics/belfrics/kyc_2.proto";
 
 option go_package = "belfrics/x/belfrics/types";
 
@@ -26,6 +27,16 @@ service Query {
   }
   rpc KycAll (QueryAllKycRequest) returns (QueryAllKycResponse) {
     option (google.api.http).get = "/belfrics/belfrics/kyc";
+  
+  }
+  
+  // Queries a list of Kyc2 items.
+  rpc Kyc2    (QueryGetKyc2Request) returns (QueryGetKyc2Response) {
+    option (google.api.http).get = "/belfrics/belfrics/kyc_2/{address}";
+  
+  }
+  rpc Kyc2All (QueryAllKyc2Request) returns (QueryAllKyc2Response) {
+    option (google.api.http).get = "/belfrics/belfrics/kyc_2";
   
   }
 }
@@ -53,6 +64,23 @@ message QueryAllKycRequest {
 
 message QueryAllKycResponse {
   repeated Kyc                                    kyc        = 1 [(gogoproto.nullable) = false];
+           cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryGetKyc2Request {
+  string address = 1;
+}
+
+message QueryGetKyc2Response {
+  Kyc2 kyc2 = 1 [(gogoproto.nullable) = false];
+}
+
+message QueryAllKyc2Request {
+  cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+
+message QueryAllKyc2Response {
+  repeated Kyc2                                   kyc2       = 1 [(gogoproto.nullable) = false];
            cosmos.base.query.v1beta1.PageResponse pagination = 2;
 }
 
