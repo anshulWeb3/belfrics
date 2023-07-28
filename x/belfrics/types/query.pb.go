@@ -481,6 +481,190 @@ func (m *QueryAllKyc2Response) GetPagination() *query.PageResponse {
 	return nil
 }
 
+type QueryGetKyc3Request struct {
+	Address string `protobuf:"bytes,1,opt,name=address,proto3" json:"address,omitempty"`
+}
+
+func (m *QueryGetKyc3Request) Reset()         { *m = QueryGetKyc3Request{} }
+func (m *QueryGetKyc3Request) String() string { return proto.CompactTextString(m) }
+func (*QueryGetKyc3Request) ProtoMessage()    {}
+func (*QueryGetKyc3Request) Descriptor() ([]byte, []int) {
+	return fileDescriptor_8f941425dbfef204, []int{10}
+}
+func (m *QueryGetKyc3Request) XXX_Unmarshal(b []byte) error {
+	return m.Unmarshal(b)
+}
+func (m *QueryGetKyc3Request) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	if deterministic {
+		return xxx_messageInfo_QueryGetKyc3Request.Marshal(b, m, deterministic)
+	} else {
+		b = b[:cap(b)]
+		n, err := m.MarshalToSizedBuffer(b)
+		if err != nil {
+			return nil, err
+		}
+		return b[:n], nil
+	}
+}
+func (m *QueryGetKyc3Request) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_QueryGetKyc3Request.Merge(m, src)
+}
+func (m *QueryGetKyc3Request) XXX_Size() int {
+	return m.Size()
+}
+func (m *QueryGetKyc3Request) XXX_DiscardUnknown() {
+	xxx_messageInfo_QueryGetKyc3Request.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_QueryGetKyc3Request proto.InternalMessageInfo
+
+func (m *QueryGetKyc3Request) GetAddress() string {
+	if m != nil {
+		return m.Address
+	}
+	return ""
+}
+
+type QueryGetKyc3Response struct {
+	Kyc3 Kyc3 `protobuf:"bytes,1,opt,name=kyc3,proto3" json:"kyc3"`
+}
+
+func (m *QueryGetKyc3Response) Reset()         { *m = QueryGetKyc3Response{} }
+func (m *QueryGetKyc3Response) String() string { return proto.CompactTextString(m) }
+func (*QueryGetKyc3Response) ProtoMessage()    {}
+func (*QueryGetKyc3Response) Descriptor() ([]byte, []int) {
+	return fileDescriptor_8f941425dbfef204, []int{11}
+}
+func (m *QueryGetKyc3Response) XXX_Unmarshal(b []byte) error {
+	return m.Unmarshal(b)
+}
+func (m *QueryGetKyc3Response) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	if deterministic {
+		return xxx_messageInfo_QueryGetKyc3Response.Marshal(b, m, deterministic)
+	} else {
+		b = b[:cap(b)]
+		n, err := m.MarshalToSizedBuffer(b)
+		if err != nil {
+			return nil, err
+		}
+		return b[:n], nil
+	}
+}
+func (m *QueryGetKyc3Response) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_QueryGetKyc3Response.Merge(m, src)
+}
+func (m *QueryGetKyc3Response) XXX_Size() int {
+	return m.Size()
+}
+func (m *QueryGetKyc3Response) XXX_DiscardUnknown() {
+	xxx_messageInfo_QueryGetKyc3Response.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_QueryGetKyc3Response proto.InternalMessageInfo
+
+func (m *QueryGetKyc3Response) GetKyc3() Kyc3 {
+	if m != nil {
+		return m.Kyc3
+	}
+	return Kyc3{}
+}
+
+type QueryAllKyc3Request struct {
+	Pagination *query.PageRequest `protobuf:"bytes,1,opt,name=pagination,proto3" json:"pagination,omitempty"`
+}
+
+func (m *QueryAllKyc3Request) Reset()         { *m = QueryAllKyc3Request{} }
+func (m *QueryAllKyc3Request) String() string { return proto.CompactTextString(m) }
+func (*QueryAllKyc3Request) ProtoMessage()    {}
+func (*QueryAllKyc3Request) Descriptor() ([]byte, []int) {
+	return fileDescriptor_8f941425dbfef204, []int{12}
+}
+func (m *QueryAllKyc3Request) XXX_Unmarshal(b []byte) error {
+	return m.Unmarshal(b)
+}
+func (m *QueryAllKyc3Request) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	if deterministic {
+		return xxx_messageInfo_QueryAllKyc3Request.Marshal(b, m, deterministic)
+	} else {
+		b = b[:cap(b)]
+		n, err := m.MarshalToSizedBuffer(b)
+		if err != nil {
+			return nil, err
+		}
+		return b[:n], nil
+	}
+}
+func (m *QueryAllKyc3Request) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_QueryAllKyc3Request.Merge(m, src)
+}
+func (m *QueryAllKyc3Request) XXX_Size() int {
+	return m.Size()
+}
+func (m *QueryAllKyc3Request) XXX_DiscardUnknown() {
+	xxx_messageInfo_QueryAllKyc3Request.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_QueryAllKyc3Request proto.InternalMessageInfo
+
+func (m *QueryAllKyc3Request) GetPagination() *query.PageRequest {
+	if m != nil {
+		return m.Pagination
+	}
+	return nil
+}
+
+type QueryAllKyc3Response struct {
+	Kyc3       []Kyc3              `protobuf:"bytes,1,rep,name=kyc3,proto3" json:"kyc3"`
+	Pagination *query.PageResponse `protobuf:"bytes,2,opt,name=pagination,proto3" json:"pagination,omitempty"`
+}
+
+func (m *QueryAllKyc3Response) Reset()         { *m = QueryAllKyc3Response{} }
+func (m *QueryAllKyc3Response) String() string { return proto.CompactTextString(m) }
+func (*QueryAllKyc3Response) ProtoMessage()    {}
+func (*QueryAllKyc3Response) Descriptor() ([]byte, []int) {
+	return fileDescriptor_8f941425dbfef204, []int{13}
+}
+func (m *QueryAllKyc3Response) XXX_Unmarshal(b []byte) error {
+	return m.Unmarshal(b)
+}
+func (m *QueryAllKyc3Response) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	if deterministic {
+		return xxx_messageInfo_QueryAllKyc3Response.Marshal(b, m, deterministic)
+	} else {
+		b = b[:cap(b)]
+		n, err := m.MarshalToSizedBuffer(b)
+		if err != nil {
+			return nil, err
+		}
+		return b[:n], nil
+	}
+}
+func (m *QueryAllKyc3Response) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_QueryAllKyc3Response.Merge(m, src)
+}
+func (m *QueryAllKyc3Response) XXX_Size() int {
+	return m.Size()
+}
+func (m *QueryAllKyc3Response) XXX_DiscardUnknown() {
+	xxx_messageInfo_QueryAllKyc3Response.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_QueryAllKyc3Response proto.InternalMessageInfo
+
+func (m *QueryAllKyc3Response) GetKyc3() []Kyc3 {
+	if m != nil {
+		return m.Kyc3
+	}
+	return nil
+}
+
+func (m *QueryAllKyc3Response) GetPagination() *query.PageResponse {
+	if m != nil {
+		return m.Pagination
+	}
+	return nil
+}
+
 func init() {
 	proto.RegisterType((*QueryParamsRequest)(nil), "belfrics.belfrics.QueryParamsRequest")
 	proto.RegisterType((*QueryParamsResponse)(nil), "belfrics.belfrics.QueryParamsResponse")
@@ -492,49 +676,57 @@ func init() {
 	proto.RegisterType((*QueryGetKyc2Response)(nil), "belfrics.belfrics.QueryGetKyc2Response")
 	proto.RegisterType((*QueryAllKyc2Request)(nil), "belfrics.belfrics.QueryAllKyc2Request")
 	proto.RegisterType((*QueryAllKyc2Response)(nil), "belfrics.belfrics.QueryAllKyc2Response")
+	proto.RegisterType((*QueryGetKyc3Request)(nil), "belfrics.belfrics.QueryGetKyc3Request")
+	proto.RegisterType((*QueryGetKyc3Response)(nil), "belfrics.belfrics.QueryGetKyc3Response")
+	proto.RegisterType((*QueryAllKyc3Request)(nil), "belfrics.belfrics.QueryAllKyc3Request")
+	proto.RegisterType((*QueryAllKyc3Response)(nil), "belfrics.belfrics.QueryAllKyc3Response")
 }
 
 func init() { proto.RegisterFile("belfrics/belfrics/query.proto", fileDescriptor_8f941425dbfef204) }
 
 var fileDescriptor_8f941425dbfef204 = []byte{
-	// 589 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0x94, 0xcf, 0x6f, 0xd3, 0x30,
-	0x14, 0xc7, 0x9b, 0xb5, 0xeb, 0x84, 0x39, 0x61, 0xaa, 0xd1, 0x75, 0x2c, 0x14, 0x0b, 0x3a, 0xd4,
-	0x43, 0xac, 0x66, 0x07, 0xce, 0x9b, 0x04, 0x13, 0xaa, 0x84, 0x46, 0x8f, 0x08, 0x84, 0xd2, 0xd4,
-	0x44, 0x55, 0xb3, 0x38, 0xab, 0x33, 0x58, 0xd8, 0x76, 0x81, 0x3b, 0x42, 0xf0, 0x4f, 0xed, 0x38,
-	0x89, 0x0b, 0x27, 0x84, 0x5a, 0xfe, 0x0e, 0x84, 0x62, 0xbf, 0x74, 0xf3, 0x92, 0x28, 0x3b, 0xec,
-	0xe6, 0xe4, 0xfd, 0xf8, 0x7e, 0xde, 0x7b, 0x7e, 0x46, 0x1b, 0x43, 0xe6, 0xbf, 0x9f, 0x8e, 0x5d,
-	0x41, 0x17, 0x87, 0x83, 0x43, 0x36, 0x8d, 0xad, 0x70, 0xca, 0x23, 0x8e, 0xef, 0xa4, 0x7f, 0xad,
-	0xf4, 0xd0, 0x6a, 0x78, 0xdc, 0xe3, 0xd2, 0x4a, 0x93, 0x93, 0x72, 0x6c, 0xdd, 0xf7, 0x38, 0xf7,
-	0x7c, 0x46, 0x9d, 0x70, 0x4c, 0x9d, 0x20, 0xe0, 0x91, 0x13, 0x8d, 0x79, 0x20, 0xc0, 0xda, 0x75,
-	0xb9, 0xd8, 0xe7, 0x82, 0x0e, 0x1d, 0xc1, 0x54, 0x7e, 0xfa, 0xa1, 0x37, 0x64, 0x91, 0xd3, 0xa3,
-	0xa1, 0xe3, 0x8d, 0x03, 0xe9, 0x0c, 0xbe, 0x66, 0x96, 0x28, 0x74, 0xa6, 0xce, 0x7e, 0x9a, 0x6b,
-	0x3d, 0x6b, 0x9f, 0xc4, 0x2e, 0x18, 0x37, 0x72, 0x8d, 0xef, 0x6c, 0x65, 0x26, 0x0d, 0x84, 0x5f,
-	0x25, 0xea, 0x7b, 0x32, 0xe1, 0x80, 0x1d, 0x1c, 0x32, 0x11, 0x91, 0x97, 0xe8, 0xae, 0xf6, 0x57,
-	0x84, 0x3c, 0x10, 0x0c, 0x3f, 0x45, 0x75, 0x25, 0xdc, 0x34, 0xda, 0xc6, 0x93, 0xdb, 0xf6, 0x9a,
-	0x95, 0x69, 0x86, 0xa5, 0x42, 0x76, 0x6a, 0x67, 0xbf, 0x1f, 0x54, 0x06, 0xe0, 0x4e, 0xba, 0xa0,
-	0xb2, 0xcb, 0xa2, 0x7e, 0xec, 0x82, 0x0a, 0x6e, 0xa0, 0xe5, 0x71, 0x30, 0x62, 0x47, 0x32, 0xdb,
-	0xad, 0x81, 0xfa, 0x20, 0xcf, 0x40, 0x3b, 0xf5, 0x05, 0x6d, 0x0b, 0x55, 0x27, 0xb1, 0x0b, 0xc2,
-	0xab, 0x39, 0xc2, 0xfd, 0xd8, 0x05, 0xd5, 0xc4, 0x91, 0xbc, 0x01, 0xc9, 0x6d, 0xdf, 0xbf, 0x24,
-	0xf9, 0x1c, 0xa1, 0x8b, 0xf6, 0x42, 0xb2, 0x8e, 0xa5, 0x66, 0x61, 0x25, 0xb3, 0xb0, 0xd4, 0xac,
-	0x61, 0x16, 0xd6, 0x9e, 0xe3, 0x31, 0x88, 0x1d, 0x5c, 0x8a, 0x24, 0x5f, 0x0d, 0xa0, 0x4c, 0xd3,
-	0x5f, 0xa5, 0xac, 0x5e, 0x8b, 0x12, 0xef, 0x6a, 0x3c, 0x4b, 0x92, 0x67, 0xb3, 0x94, 0x47, 0x89,
-	0x69, 0x40, 0x54, 0xeb, 0x9a, 0x9d, 0xd6, 0xdb, 0x44, 0x2b, 0xce, 0x68, 0x34, 0x65, 0x42, 0x40,
-	0x93, 0xd3, 0x4f, 0xf2, 0x02, 0x35, 0xf4, 0x00, 0xa8, 0xa0, 0x87, 0x6a, 0x93, 0xd8, 0xb5, 0xa1,
-	0x37, 0xf7, 0xf2, 0x4b, 0xb0, 0xa1, 0x06, 0xe9, 0x4a, 0xde, 0x6a, 0xbd, 0xb0, 0x6f, 0xba, 0xd7,
-	0xdf, 0x0d, 0x40, 0x5d, 0xe4, 0xcf, 0xa0, 0x56, 0xaf, 0x89, 0x7a, 0x63, 0xfd, 0xb6, 0xff, 0xd5,
-	0xd0, 0xb2, 0x84, 0xc2, 0x9f, 0x50, 0x5d, 0xdd, 0x79, 0xfc, 0x38, 0x87, 0x20, 0xbb, 0x5c, 0xad,
-	0x4e, 0x99, 0x9b, 0x92, 0x23, 0x0f, 0x3f, 0xff, 0xfc, 0xfb, 0x63, 0x69, 0x1d, 0xaf, 0xd1, 0xa2,
-	0xfd, 0xc7, 0x27, 0xa8, 0xda, 0x8f, 0xdd, 0x62, 0x61, 0x6d, 0xdf, 0x8a, 0x85, 0xf5, 0x55, 0x23,
-	0x1d, 0x29, 0xdc, 0xc6, 0x26, 0xcd, 0x7d, 0x3b, 0xe8, 0xb1, 0x5c, 0xd4, 0x53, 0xfc, 0x11, 0xd5,
-	0xfb, 0xb1, 0xbb, 0xed, 0xfb, 0xc5, 0x00, 0xda, 0xf6, 0x15, 0x03, 0xe8, 0x5b, 0x44, 0x4c, 0x09,
-	0xd0, 0xc4, 0xab, 0xf9, 0x00, 0xf8, 0x8b, 0x81, 0x6a, 0xc9, 0x68, 0x71, 0x49, 0x45, 0xe9, 0x55,
-	0x6c, 0x6d, 0x96, 0xfa, 0x81, 0x72, 0x57, 0x2a, 0x3f, 0xc2, 0x84, 0x16, 0x3c, 0x9b, 0xf4, 0x18,
-	0x16, 0xe8, 0x14, 0x9f, 0xa0, 0x95, 0x24, 0x36, 0xa9, 0xbf, 0xa4, 0xb0, 0x72, 0x8e, 0x2b, 0x57,
-	0x9b, 0xb4, 0x25, 0x47, 0x0b, 0x37, 0x8b, 0x38, 0x76, 0xb6, 0xce, 0x66, 0xa6, 0x71, 0x3e, 0x33,
-	0x8d, 0x3f, 0x33, 0xd3, 0xf8, 0x36, 0x37, 0x2b, 0xe7, 0x73, 0xb3, 0xf2, 0x6b, 0x6e, 0x56, 0x5e,
-	0xaf, 0x2d, 0x3c, 0x8f, 0x2e, 0x82, 0xa2, 0x38, 0x64, 0x62, 0x58, 0x97, 0x8f, 0xfe, 0xd6, 0xff,
-	0x00, 0x00, 0x00, 0xff, 0xff, 0x40, 0x86, 0xbf, 0x98, 0xe4, 0x06, 0x00, 0x00,
+	// 648 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xb4, 0x96, 0x4f, 0x6f, 0xd3, 0x4c,
+	0x10, 0xc6, 0xe3, 0x26, 0x4d, 0xf4, 0xee, 0x7b, 0x62, 0x89, 0x4a, 0x92, 0x52, 0x13, 0x56, 0x90,
+	0xa2, 0x1c, 0xbc, 0x8a, 0xf7, 0xc0, 0xb9, 0x95, 0xa0, 0x42, 0x91, 0x50, 0xc9, 0x11, 0x81, 0x90,
+	0xe3, 0x2c, 0x56, 0x14, 0xd7, 0x76, 0x63, 0x17, 0x6a, 0xda, 0x5e, 0xca, 0x1d, 0x21, 0xf8, 0x52,
+	0x3d, 0x56, 0xe2, 0xc2, 0x09, 0xa1, 0x84, 0x0f, 0x82, 0xbc, 0x1e, 0xa7, 0x71, 0x6c, 0xd7, 0x46,
+	0x6a, 0x6f, 0xb6, 0xe7, 0xcf, 0xf3, 0x9b, 0x67, 0xbb, 0xd3, 0xa0, 0xad, 0x21, 0x37, 0xdf, 0x4f,
+	0xc7, 0xba, 0x4b, 0x17, 0x0f, 0x87, 0x47, 0x7c, 0xea, 0x2b, 0xce, 0xd4, 0xf6, 0x6c, 0x7c, 0x27,
+	0xfa, 0xaa, 0x44, 0x0f, 0xad, 0xba, 0x61, 0x1b, 0xb6, 0x88, 0xd2, 0xe0, 0x29, 0x4c, 0x6c, 0xdd,
+	0x37, 0x6c, 0xdb, 0x30, 0x39, 0xd5, 0x9c, 0x31, 0xd5, 0x2c, 0xcb, 0xf6, 0x34, 0x6f, 0x6c, 0x5b,
+	0x2e, 0x44, 0xbb, 0xba, 0xed, 0x1e, 0xd8, 0x2e, 0x1d, 0x6a, 0x2e, 0x0f, 0xfb, 0xd3, 0x0f, 0xbd,
+	0x21, 0xf7, 0xb4, 0x1e, 0x75, 0x34, 0x63, 0x6c, 0x89, 0x64, 0xc8, 0x95, 0x93, 0x44, 0x8e, 0x36,
+	0xd5, 0x0e, 0xa2, 0x5e, 0x9b, 0xc9, 0xf8, 0xc4, 0xd7, 0x21, 0xb8, 0x95, 0x1a, 0x7c, 0xa7, 0x5e,
+	0x1f, 0x66, 0x61, 0x98, 0xd4, 0x11, 0x7e, 0x15, 0xc0, 0xed, 0x0b, 0xbd, 0x01, 0x3f, 0x3c, 0xe2,
+	0xae, 0x47, 0x5e, 0xa2, 0xbb, 0xb1, 0xaf, 0xae, 0x63, 0x5b, 0x2e, 0xc7, 0x4f, 0x51, 0x35, 0xe4,
+	0x6a, 0x48, 0x6d, 0xe9, 0xc9, 0xff, 0x6a, 0x53, 0x49, 0x78, 0xa5, 0x84, 0x25, 0xbb, 0x95, 0x8b,
+	0x5f, 0x0f, 0x4a, 0x03, 0x48, 0x27, 0x5d, 0x50, 0xd9, 0xe3, 0x5e, 0xdf, 0xd7, 0x41, 0x05, 0xd7,
+	0xd1, 0xfa, 0xd8, 0x1a, 0xf1, 0x63, 0xd1, 0xed, 0xbf, 0x41, 0xf8, 0x42, 0x9e, 0x81, 0x76, 0x94,
+	0x0b, 0xda, 0x0a, 0x2a, 0x4f, 0x7c, 0x1d, 0x84, 0x37, 0x52, 0x84, 0xfb, 0xbe, 0x0e, 0xaa, 0x41,
+	0x22, 0x79, 0x03, 0x92, 0x3b, 0xa6, 0xb9, 0x24, 0xf9, 0x1c, 0xa1, 0x2b, 0xf7, 0xa1, 0x59, 0x47,
+	0x09, 0x8f, 0x4a, 0x09, 0x8e, 0x4a, 0x09, 0xff, 0x14, 0xe0, 0xa8, 0x94, 0x7d, 0xcd, 0xe0, 0x50,
+	0x3b, 0x58, 0xaa, 0x24, 0x5f, 0x24, 0xa0, 0x8c, 0xda, 0xaf, 0x52, 0x96, 0x0b, 0x51, 0xe2, 0xbd,
+	0x18, 0xcf, 0x9a, 0xe0, 0xd9, 0xce, 0xe5, 0x09, 0xc5, 0x62, 0x40, 0x34, 0xe6, 0x9a, 0x1a, 0xcd,
+	0xdb, 0x40, 0x35, 0x6d, 0x34, 0x9a, 0x72, 0xd7, 0x05, 0x93, 0xa3, 0x57, 0xf2, 0x02, 0xd5, 0xe3,
+	0x05, 0x30, 0x41, 0x0f, 0x55, 0x26, 0xbe, 0xae, 0x82, 0x37, 0xf7, 0xd2, 0x47, 0x50, 0x61, 0x06,
+	0x91, 0x4a, 0xde, 0xc6, 0xbc, 0x50, 0x6f, 0xda, 0xeb, 0x6f, 0x12, 0xa0, 0x2e, 0xfa, 0x27, 0x50,
+	0xcb, 0x05, 0x51, 0x6f, 0xcb, 0x6f, 0xf6, 0xaf, 0x7e, 0xb3, 0x95, 0x21, 0xd8, 0xf5, 0x7e, 0xb3,
+	0xa5, 0x21, 0xd8, 0x8a, 0xdf, 0xec, 0x96, 0xfd, 0x4e, 0x43, 0x2d, 0x17, 0x44, 0xbd, 0x31, 0xbf,
+	0xd5, 0xf3, 0x1a, 0x5a, 0x17, 0x50, 0xf8, 0x13, 0xaa, 0x86, 0x3b, 0x06, 0x3f, 0x4e, 0x21, 0x48,
+	0x2e, 0xb3, 0x56, 0x27, 0x2f, 0x2d, 0x94, 0x23, 0x0f, 0xcf, 0x7f, 0xfc, 0xf9, 0xbe, 0xb6, 0x89,
+	0x9b, 0x34, 0x6b, 0x1d, 0xe3, 0x53, 0x54, 0xee, 0xfb, 0x7a, 0xb6, 0x70, 0x6c, 0xbf, 0x65, 0x0b,
+	0xc7, 0x57, 0x1b, 0xe9, 0x08, 0xe1, 0x36, 0x96, 0x69, 0xea, 0xae, 0xa6, 0x27, 0x62, 0x31, 0x9e,
+	0xe1, 0x8f, 0xa8, 0xda, 0xf7, 0xf5, 0x1d, 0xd3, 0xcc, 0x06, 0x88, 0x6d, 0xbb, 0x6c, 0x80, 0xf8,
+	0xd6, 0x22, 0xb2, 0x00, 0x68, 0xe0, 0x8d, 0x74, 0x00, 0xfc, 0x59, 0x42, 0x95, 0xe0, 0x2a, 0xe1,
+	0x9c, 0x89, 0xa2, 0xab, 0xdf, 0xda, 0xce, 0xcd, 0x03, 0xe5, 0xae, 0x50, 0x7e, 0x84, 0x09, 0xcd,
+	0xf8, 0x2f, 0x46, 0x4f, 0xe0, 0x02, 0x9d, 0xe1, 0x53, 0x54, 0x0b, 0x6a, 0x83, 0xf9, 0x73, 0x06,
+	0xcb, 0xe7, 0x58, 0x59, 0x25, 0xa4, 0x2d, 0x38, 0x5a, 0xb8, 0x91, 0xc5, 0x11, 0x79, 0xc0, 0xf2,
+	0x3c, 0x60, 0x05, 0x3d, 0x60, 0x85, 0x3d, 0x60, 0x09, 0x0f, 0x58, 0x01, 0x0f, 0x58, 0x41, 0x0f,
+	0x58, 0x61, 0x0f, 0xd8, 0x2e, 0xbb, 0x98, 0xc9, 0xd2, 0xe5, 0x4c, 0x96, 0x7e, 0xcf, 0x64, 0xe9,
+	0xeb, 0x5c, 0x2e, 0x5d, 0xce, 0xe5, 0xd2, 0xcf, 0xb9, 0x5c, 0x7a, 0xdd, 0x5c, 0x64, 0x1e, 0x5f,
+	0x15, 0x79, 0xbe, 0xc3, 0xdd, 0x61, 0x55, 0xfc, 0xd0, 0x60, 0x7f, 0x03, 0x00, 0x00, 0xff, 0xff,
+	0x3e, 0xbb, 0x68, 0x56, 0x77, 0x09, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -557,6 +749,9 @@ type QueryClient interface {
 	// Queries a list of Kyc2 items.
 	Kyc2(ctx context.Context, in *QueryGetKyc2Request, opts ...grpc.CallOption) (*QueryGetKyc2Response, error)
 	Kyc2All(ctx context.Context, in *QueryAllKyc2Request, opts ...grpc.CallOption) (*QueryAllKyc2Response, error)
+	// Queries a list of Kyc3 items.
+	Kyc3(ctx context.Context, in *QueryGetKyc3Request, opts ...grpc.CallOption) (*QueryGetKyc3Response, error)
+	Kyc3All(ctx context.Context, in *QueryAllKyc3Request, opts ...grpc.CallOption) (*QueryAllKyc3Response, error)
 }
 
 type queryClient struct {
@@ -612,6 +807,24 @@ func (c *queryClient) Kyc2All(ctx context.Context, in *QueryAllKyc2Request, opts
 	return out, nil
 }
 
+func (c *queryClient) Kyc3(ctx context.Context, in *QueryGetKyc3Request, opts ...grpc.CallOption) (*QueryGetKyc3Response, error) {
+	out := new(QueryGetKyc3Response)
+	err := c.cc.Invoke(ctx, "/belfrics.belfrics.Query/Kyc3", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *queryClient) Kyc3All(ctx context.Context, in *QueryAllKyc3Request, opts ...grpc.CallOption) (*QueryAllKyc3Response, error) {
+	out := new(QueryAllKyc3Response)
+	err := c.cc.Invoke(ctx, "/belfrics.belfrics.Query/Kyc3All", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // QueryServer is the server API for Query service.
 type QueryServer interface {
 	// Parameters queries the parameters of the module.
@@ -622,6 +835,9 @@ type QueryServer interface {
 	// Queries a list of Kyc2 items.
 	Kyc2(context.Context, *QueryGetKyc2Request) (*QueryGetKyc2Response, error)
 	Kyc2All(context.Context, *QueryAllKyc2Request) (*QueryAllKyc2Response, error)
+	// Queries a list of Kyc3 items.
+	Kyc3(context.Context, *QueryGetKyc3Request) (*QueryGetKyc3Response, error)
+	Kyc3All(context.Context, *QueryAllKyc3Request) (*QueryAllKyc3Response, error)
 }
 
 // UnimplementedQueryServer can be embedded to have forward compatible implementations.
@@ -642,6 +858,12 @@ func (*UnimplementedQueryServer) Kyc2(ctx context.Context, req *QueryGetKyc2Requ
 }
 func (*UnimplementedQueryServer) Kyc2All(ctx context.Context, req *QueryAllKyc2Request) (*QueryAllKyc2Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Kyc2All not implemented")
+}
+func (*UnimplementedQueryServer) Kyc3(ctx context.Context, req *QueryGetKyc3Request) (*QueryGetKyc3Response, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Kyc3 not implemented")
+}
+func (*UnimplementedQueryServer) Kyc3All(ctx context.Context, req *QueryAllKyc3Request) (*QueryAllKyc3Response, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Kyc3All not implemented")
 }
 
 func RegisterQueryServer(s grpc1.Server, srv QueryServer) {
@@ -738,6 +960,42 @@ func _Query_Kyc2All_Handler(srv interface{}, ctx context.Context, dec func(inter
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Query_Kyc3_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(QueryGetKyc3Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(QueryServer).Kyc3(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/belfrics.belfrics.Query/Kyc3",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(QueryServer).Kyc3(ctx, req.(*QueryGetKyc3Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Query_Kyc3All_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(QueryAllKyc3Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(QueryServer).Kyc3All(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/belfrics.belfrics.Query/Kyc3All",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(QueryServer).Kyc3All(ctx, req.(*QueryAllKyc3Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _Query_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "belfrics.belfrics.Query",
 	HandlerType: (*QueryServer)(nil),
@@ -761,6 +1019,14 @@ var _Query_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "Kyc2All",
 			Handler:    _Query_Kyc2All_Handler,
+		},
+		{
+			MethodName: "Kyc3",
+			Handler:    _Query_Kyc3_Handler,
+		},
+		{
+			MethodName: "Kyc3All",
+			Handler:    _Query_Kyc3All_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
@@ -1117,6 +1383,153 @@ func (m *QueryAllKyc2Response) MarshalToSizedBuffer(dAtA []byte) (int, error) {
 	return len(dAtA) - i, nil
 }
 
+func (m *QueryGetKyc3Request) Marshal() (dAtA []byte, err error) {
+	size := m.Size()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *QueryGetKyc3Request) MarshalTo(dAtA []byte) (int, error) {
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *QueryGetKyc3Request) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if len(m.Address) > 0 {
+		i -= len(m.Address)
+		copy(dAtA[i:], m.Address)
+		i = encodeVarintQuery(dAtA, i, uint64(len(m.Address)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
+}
+
+func (m *QueryGetKyc3Response) Marshal() (dAtA []byte, err error) {
+	size := m.Size()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *QueryGetKyc3Response) MarshalTo(dAtA []byte) (int, error) {
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *QueryGetKyc3Response) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	{
+		size, err := m.Kyc3.MarshalToSizedBuffer(dAtA[:i])
+		if err != nil {
+			return 0, err
+		}
+		i -= size
+		i = encodeVarintQuery(dAtA, i, uint64(size))
+	}
+	i--
+	dAtA[i] = 0xa
+	return len(dAtA) - i, nil
+}
+
+func (m *QueryAllKyc3Request) Marshal() (dAtA []byte, err error) {
+	size := m.Size()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *QueryAllKyc3Request) MarshalTo(dAtA []byte) (int, error) {
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *QueryAllKyc3Request) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if m.Pagination != nil {
+		{
+			size, err := m.Pagination.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintQuery(dAtA, i, uint64(size))
+		}
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
+}
+
+func (m *QueryAllKyc3Response) Marshal() (dAtA []byte, err error) {
+	size := m.Size()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *QueryAllKyc3Response) MarshalTo(dAtA []byte) (int, error) {
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *QueryAllKyc3Response) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if m.Pagination != nil {
+		{
+			size, err := m.Pagination.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintQuery(dAtA, i, uint64(size))
+		}
+		i--
+		dAtA[i] = 0x12
+	}
+	if len(m.Kyc3) > 0 {
+		for iNdEx := len(m.Kyc3) - 1; iNdEx >= 0; iNdEx-- {
+			{
+				size, err := m.Kyc3[iNdEx].MarshalToSizedBuffer(dAtA[:i])
+				if err != nil {
+					return 0, err
+				}
+				i -= size
+				i = encodeVarintQuery(dAtA, i, uint64(size))
+			}
+			i--
+			dAtA[i] = 0xa
+		}
+	}
+	return len(dAtA) - i, nil
+}
+
 func encodeVarintQuery(dAtA []byte, offset int, v uint64) int {
 	offset -= sovQuery(v)
 	base := offset
@@ -1249,6 +1662,62 @@ func (m *QueryAllKyc2Response) Size() (n int) {
 	_ = l
 	if len(m.Kyc2) > 0 {
 		for _, e := range m.Kyc2 {
+			l = e.Size()
+			n += 1 + l + sovQuery(uint64(l))
+		}
+	}
+	if m.Pagination != nil {
+		l = m.Pagination.Size()
+		n += 1 + l + sovQuery(uint64(l))
+	}
+	return n
+}
+
+func (m *QueryGetKyc3Request) Size() (n int) {
+	if m == nil {
+		return 0
+	}
+	var l int
+	_ = l
+	l = len(m.Address)
+	if l > 0 {
+		n += 1 + l + sovQuery(uint64(l))
+	}
+	return n
+}
+
+func (m *QueryGetKyc3Response) Size() (n int) {
+	if m == nil {
+		return 0
+	}
+	var l int
+	_ = l
+	l = m.Kyc3.Size()
+	n += 1 + l + sovQuery(uint64(l))
+	return n
+}
+
+func (m *QueryAllKyc3Request) Size() (n int) {
+	if m == nil {
+		return 0
+	}
+	var l int
+	_ = l
+	if m.Pagination != nil {
+		l = m.Pagination.Size()
+		n += 1 + l + sovQuery(uint64(l))
+	}
+	return n
+}
+
+func (m *QueryAllKyc3Response) Size() (n int) {
+	if m == nil {
+		return 0
+	}
+	var l int
+	_ = l
+	if len(m.Kyc3) > 0 {
+		for _, e := range m.Kyc3 {
 			l = e.Size()
 			n += 1 + l + sovQuery(uint64(l))
 		}
@@ -2081,6 +2550,377 @@ func (m *QueryAllKyc2Response) Unmarshal(dAtA []byte) error {
 			}
 			m.Kyc2 = append(m.Kyc2, Kyc2{})
 			if err := m.Kyc2[len(m.Kyc2)-1].Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
+				return err
+			}
+			iNdEx = postIndex
+		case 2:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Pagination", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowQuery
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthQuery
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthQuery
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.Pagination == nil {
+				m.Pagination = &query.PageResponse{}
+			}
+			if err := m.Pagination.Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
+				return err
+			}
+			iNdEx = postIndex
+		default:
+			iNdEx = preIndex
+			skippy, err := skipQuery(dAtA[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if (skippy < 0) || (iNdEx+skippy) < 0 {
+				return ErrInvalidLengthQuery
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += skippy
+		}
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
+}
+func (m *QueryGetKyc3Request) Unmarshal(dAtA []byte) error {
+	l := len(dAtA)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowQuery
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := dAtA[iNdEx]
+			iNdEx++
+			wire |= uint64(b&0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: QueryGetKyc3Request: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: QueryGetKyc3Request: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		case 1:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Address", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowQuery
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthQuery
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return ErrInvalidLengthQuery
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.Address = string(dAtA[iNdEx:postIndex])
+			iNdEx = postIndex
+		default:
+			iNdEx = preIndex
+			skippy, err := skipQuery(dAtA[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if (skippy < 0) || (iNdEx+skippy) < 0 {
+				return ErrInvalidLengthQuery
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += skippy
+		}
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
+}
+func (m *QueryGetKyc3Response) Unmarshal(dAtA []byte) error {
+	l := len(dAtA)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowQuery
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := dAtA[iNdEx]
+			iNdEx++
+			wire |= uint64(b&0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: QueryGetKyc3Response: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: QueryGetKyc3Response: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		case 1:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Kyc3", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowQuery
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthQuery
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthQuery
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if err := m.Kyc3.Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
+				return err
+			}
+			iNdEx = postIndex
+		default:
+			iNdEx = preIndex
+			skippy, err := skipQuery(dAtA[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if (skippy < 0) || (iNdEx+skippy) < 0 {
+				return ErrInvalidLengthQuery
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += skippy
+		}
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
+}
+func (m *QueryAllKyc3Request) Unmarshal(dAtA []byte) error {
+	l := len(dAtA)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowQuery
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := dAtA[iNdEx]
+			iNdEx++
+			wire |= uint64(b&0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: QueryAllKyc3Request: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: QueryAllKyc3Request: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		case 1:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Pagination", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowQuery
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthQuery
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthQuery
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			if m.Pagination == nil {
+				m.Pagination = &query.PageRequest{}
+			}
+			if err := m.Pagination.Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
+				return err
+			}
+			iNdEx = postIndex
+		default:
+			iNdEx = preIndex
+			skippy, err := skipQuery(dAtA[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if (skippy < 0) || (iNdEx+skippy) < 0 {
+				return ErrInvalidLengthQuery
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += skippy
+		}
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
+}
+func (m *QueryAllKyc3Response) Unmarshal(dAtA []byte) error {
+	l := len(dAtA)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowQuery
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := dAtA[iNdEx]
+			iNdEx++
+			wire |= uint64(b&0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: QueryAllKyc3Response: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: QueryAllKyc3Response: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		case 1:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Kyc3", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowQuery
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				msglen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthQuery
+			}
+			postIndex := iNdEx + msglen
+			if postIndex < 0 {
+				return ErrInvalidLengthQuery
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.Kyc3 = append(m.Kyc3, Kyc3{})
+			if err := m.Kyc3[len(m.Kyc3)-1].Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
 				return err
 			}
 			iNdEx = postIndex

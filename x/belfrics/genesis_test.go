@@ -30,6 +30,14 @@ func TestGenesis(t *testing.T) {
 				Address: "1",
 			},
 		},
+		Kyc3List: []types.Kyc3{
+			{
+				Address: "0",
+			},
+			{
+				Address: "1",
+			},
+		},
 		// this line is used by starport scaffolding # genesis/test/state
 	}
 
@@ -43,5 +51,6 @@ func TestGenesis(t *testing.T) {
 
 	require.ElementsMatch(t, genesisState.KycList, got.KycList)
 	require.ElementsMatch(t, genesisState.Kyc2List, got.Kyc2List)
+	require.ElementsMatch(t, genesisState.Kyc3List, got.Kyc3List)
 	// this line is used by starport scaffolding # genesis/test/assert
 }

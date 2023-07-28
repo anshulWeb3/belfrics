@@ -571,6 +571,286 @@ func (m *MsgDeleteKyc2Response) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_MsgDeleteKyc2Response proto.InternalMessageInfo
 
+type MsgCreateKyc3 struct {
+	Creator string `protobuf:"bytes,1,opt,name=creator,proto3" json:"creator,omitempty"`
+	Address string `protobuf:"bytes,2,opt,name=address,proto3" json:"address,omitempty"`
+	Value   bool   `protobuf:"varint,3,opt,name=value,proto3" json:"value,omitempty"`
+}
+
+func (m *MsgCreateKyc3) Reset()         { *m = MsgCreateKyc3{} }
+func (m *MsgCreateKyc3) String() string { return proto.CompactTextString(m) }
+func (*MsgCreateKyc3) ProtoMessage()    {}
+func (*MsgCreateKyc3) Descriptor() ([]byte, []int) {
+	return fileDescriptor_8879f226cbb26191, []int{12}
+}
+func (m *MsgCreateKyc3) XXX_Unmarshal(b []byte) error {
+	return m.Unmarshal(b)
+}
+func (m *MsgCreateKyc3) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	if deterministic {
+		return xxx_messageInfo_MsgCreateKyc3.Marshal(b, m, deterministic)
+	} else {
+		b = b[:cap(b)]
+		n, err := m.MarshalToSizedBuffer(b)
+		if err != nil {
+			return nil, err
+		}
+		return b[:n], nil
+	}
+}
+func (m *MsgCreateKyc3) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MsgCreateKyc3.Merge(m, src)
+}
+func (m *MsgCreateKyc3) XXX_Size() int {
+	return m.Size()
+}
+func (m *MsgCreateKyc3) XXX_DiscardUnknown() {
+	xxx_messageInfo_MsgCreateKyc3.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_MsgCreateKyc3 proto.InternalMessageInfo
+
+func (m *MsgCreateKyc3) GetCreator() string {
+	if m != nil {
+		return m.Creator
+	}
+	return ""
+}
+
+func (m *MsgCreateKyc3) GetAddress() string {
+	if m != nil {
+		return m.Address
+	}
+	return ""
+}
+
+func (m *MsgCreateKyc3) GetValue() bool {
+	if m != nil {
+		return m.Value
+	}
+	return false
+}
+
+type MsgCreateKyc3Response struct {
+}
+
+func (m *MsgCreateKyc3Response) Reset()         { *m = MsgCreateKyc3Response{} }
+func (m *MsgCreateKyc3Response) String() string { return proto.CompactTextString(m) }
+func (*MsgCreateKyc3Response) ProtoMessage()    {}
+func (*MsgCreateKyc3Response) Descriptor() ([]byte, []int) {
+	return fileDescriptor_8879f226cbb26191, []int{13}
+}
+func (m *MsgCreateKyc3Response) XXX_Unmarshal(b []byte) error {
+	return m.Unmarshal(b)
+}
+func (m *MsgCreateKyc3Response) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	if deterministic {
+		return xxx_messageInfo_MsgCreateKyc3Response.Marshal(b, m, deterministic)
+	} else {
+		b = b[:cap(b)]
+		n, err := m.MarshalToSizedBuffer(b)
+		if err != nil {
+			return nil, err
+		}
+		return b[:n], nil
+	}
+}
+func (m *MsgCreateKyc3Response) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MsgCreateKyc3Response.Merge(m, src)
+}
+func (m *MsgCreateKyc3Response) XXX_Size() int {
+	return m.Size()
+}
+func (m *MsgCreateKyc3Response) XXX_DiscardUnknown() {
+	xxx_messageInfo_MsgCreateKyc3Response.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_MsgCreateKyc3Response proto.InternalMessageInfo
+
+type MsgUpdateKyc3 struct {
+	Creator string `protobuf:"bytes,1,opt,name=creator,proto3" json:"creator,omitempty"`
+	Address string `protobuf:"bytes,2,opt,name=address,proto3" json:"address,omitempty"`
+	Value   bool   `protobuf:"varint,3,opt,name=value,proto3" json:"value,omitempty"`
+}
+
+func (m *MsgUpdateKyc3) Reset()         { *m = MsgUpdateKyc3{} }
+func (m *MsgUpdateKyc3) String() string { return proto.CompactTextString(m) }
+func (*MsgUpdateKyc3) ProtoMessage()    {}
+func (*MsgUpdateKyc3) Descriptor() ([]byte, []int) {
+	return fileDescriptor_8879f226cbb26191, []int{14}
+}
+func (m *MsgUpdateKyc3) XXX_Unmarshal(b []byte) error {
+	return m.Unmarshal(b)
+}
+func (m *MsgUpdateKyc3) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	if deterministic {
+		return xxx_messageInfo_MsgUpdateKyc3.Marshal(b, m, deterministic)
+	} else {
+		b = b[:cap(b)]
+		n, err := m.MarshalToSizedBuffer(b)
+		if err != nil {
+			return nil, err
+		}
+		return b[:n], nil
+	}
+}
+func (m *MsgUpdateKyc3) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MsgUpdateKyc3.Merge(m, src)
+}
+func (m *MsgUpdateKyc3) XXX_Size() int {
+	return m.Size()
+}
+func (m *MsgUpdateKyc3) XXX_DiscardUnknown() {
+	xxx_messageInfo_MsgUpdateKyc3.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_MsgUpdateKyc3 proto.InternalMessageInfo
+
+func (m *MsgUpdateKyc3) GetCreator() string {
+	if m != nil {
+		return m.Creator
+	}
+	return ""
+}
+
+func (m *MsgUpdateKyc3) GetAddress() string {
+	if m != nil {
+		return m.Address
+	}
+	return ""
+}
+
+func (m *MsgUpdateKyc3) GetValue() bool {
+	if m != nil {
+		return m.Value
+	}
+	return false
+}
+
+type MsgUpdateKyc3Response struct {
+}
+
+func (m *MsgUpdateKyc3Response) Reset()         { *m = MsgUpdateKyc3Response{} }
+func (m *MsgUpdateKyc3Response) String() string { return proto.CompactTextString(m) }
+func (*MsgUpdateKyc3Response) ProtoMessage()    {}
+func (*MsgUpdateKyc3Response) Descriptor() ([]byte, []int) {
+	return fileDescriptor_8879f226cbb26191, []int{15}
+}
+func (m *MsgUpdateKyc3Response) XXX_Unmarshal(b []byte) error {
+	return m.Unmarshal(b)
+}
+func (m *MsgUpdateKyc3Response) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	if deterministic {
+		return xxx_messageInfo_MsgUpdateKyc3Response.Marshal(b, m, deterministic)
+	} else {
+		b = b[:cap(b)]
+		n, err := m.MarshalToSizedBuffer(b)
+		if err != nil {
+			return nil, err
+		}
+		return b[:n], nil
+	}
+}
+func (m *MsgUpdateKyc3Response) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MsgUpdateKyc3Response.Merge(m, src)
+}
+func (m *MsgUpdateKyc3Response) XXX_Size() int {
+	return m.Size()
+}
+func (m *MsgUpdateKyc3Response) XXX_DiscardUnknown() {
+	xxx_messageInfo_MsgUpdateKyc3Response.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_MsgUpdateKyc3Response proto.InternalMessageInfo
+
+type MsgDeleteKyc3 struct {
+	Creator string `protobuf:"bytes,1,opt,name=creator,proto3" json:"creator,omitempty"`
+	Address string `protobuf:"bytes,2,opt,name=address,proto3" json:"address,omitempty"`
+}
+
+func (m *MsgDeleteKyc3) Reset()         { *m = MsgDeleteKyc3{} }
+func (m *MsgDeleteKyc3) String() string { return proto.CompactTextString(m) }
+func (*MsgDeleteKyc3) ProtoMessage()    {}
+func (*MsgDeleteKyc3) Descriptor() ([]byte, []int) {
+	return fileDescriptor_8879f226cbb26191, []int{16}
+}
+func (m *MsgDeleteKyc3) XXX_Unmarshal(b []byte) error {
+	return m.Unmarshal(b)
+}
+func (m *MsgDeleteKyc3) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	if deterministic {
+		return xxx_messageInfo_MsgDeleteKyc3.Marshal(b, m, deterministic)
+	} else {
+		b = b[:cap(b)]
+		n, err := m.MarshalToSizedBuffer(b)
+		if err != nil {
+			return nil, err
+		}
+		return b[:n], nil
+	}
+}
+func (m *MsgDeleteKyc3) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MsgDeleteKyc3.Merge(m, src)
+}
+func (m *MsgDeleteKyc3) XXX_Size() int {
+	return m.Size()
+}
+func (m *MsgDeleteKyc3) XXX_DiscardUnknown() {
+	xxx_messageInfo_MsgDeleteKyc3.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_MsgDeleteKyc3 proto.InternalMessageInfo
+
+func (m *MsgDeleteKyc3) GetCreator() string {
+	if m != nil {
+		return m.Creator
+	}
+	return ""
+}
+
+func (m *MsgDeleteKyc3) GetAddress() string {
+	if m != nil {
+		return m.Address
+	}
+	return ""
+}
+
+type MsgDeleteKyc3Response struct {
+}
+
+func (m *MsgDeleteKyc3Response) Reset()         { *m = MsgDeleteKyc3Response{} }
+func (m *MsgDeleteKyc3Response) String() string { return proto.CompactTextString(m) }
+func (*MsgDeleteKyc3Response) ProtoMessage()    {}
+func (*MsgDeleteKyc3Response) Descriptor() ([]byte, []int) {
+	return fileDescriptor_8879f226cbb26191, []int{17}
+}
+func (m *MsgDeleteKyc3Response) XXX_Unmarshal(b []byte) error {
+	return m.Unmarshal(b)
+}
+func (m *MsgDeleteKyc3Response) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	if deterministic {
+		return xxx_messageInfo_MsgDeleteKyc3Response.Marshal(b, m, deterministic)
+	} else {
+		b = b[:cap(b)]
+		n, err := m.MarshalToSizedBuffer(b)
+		if err != nil {
+			return nil, err
+		}
+		return b[:n], nil
+	}
+}
+func (m *MsgDeleteKyc3Response) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MsgDeleteKyc3Response.Merge(m, src)
+}
+func (m *MsgDeleteKyc3Response) XXX_Size() int {
+	return m.Size()
+}
+func (m *MsgDeleteKyc3Response) XXX_DiscardUnknown() {
+	xxx_messageInfo_MsgDeleteKyc3Response.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_MsgDeleteKyc3Response proto.InternalMessageInfo
+
 func init() {
 	proto.RegisterType((*MsgCreateKyc)(nil), "belfrics.belfrics.MsgCreateKyc")
 	proto.RegisterType((*MsgCreateKycResponse)(nil), "belfrics.belfrics.MsgCreateKycResponse")
@@ -584,35 +864,45 @@ func init() {
 	proto.RegisterType((*MsgUpdateKyc2Response)(nil), "belfrics.belfrics.MsgUpdateKyc2Response")
 	proto.RegisterType((*MsgDeleteKyc2)(nil), "belfrics.belfrics.MsgDeleteKyc2")
 	proto.RegisterType((*MsgDeleteKyc2Response)(nil), "belfrics.belfrics.MsgDeleteKyc2Response")
+	proto.RegisterType((*MsgCreateKyc3)(nil), "belfrics.belfrics.MsgCreateKyc3")
+	proto.RegisterType((*MsgCreateKyc3Response)(nil), "belfrics.belfrics.MsgCreateKyc3Response")
+	proto.RegisterType((*MsgUpdateKyc3)(nil), "belfrics.belfrics.MsgUpdateKyc3")
+	proto.RegisterType((*MsgUpdateKyc3Response)(nil), "belfrics.belfrics.MsgUpdateKyc3Response")
+	proto.RegisterType((*MsgDeleteKyc3)(nil), "belfrics.belfrics.MsgDeleteKyc3")
+	proto.RegisterType((*MsgDeleteKyc3Response)(nil), "belfrics.belfrics.MsgDeleteKyc3Response")
 }
 
 func init() { proto.RegisterFile("belfrics/belfrics/tx.proto", fileDescriptor_8879f226cbb26191) }
 
 var fileDescriptor_8879f226cbb26191 = []byte{
-	// 358 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x92, 0x4a, 0x4a, 0xcd, 0x49,
-	0x2b, 0xca, 0x4c, 0x2e, 0xd6, 0x87, 0x33, 0x4a, 0x2a, 0xf4, 0x0a, 0x8a, 0xf2, 0x4b, 0xf2, 0x85,
-	0x04, 0x61, 0x42, 0x7a, 0x30, 0x86, 0x94, 0x34, 0xa6, 0xf2, 0xec, 0xca, 0x64, 0x88, 0x7a, 0x29,
-	0x59, 0xac, 0x92, 0xf1, 0x46, 0x10, 0x69, 0xa5, 0x08, 0x2e, 0x1e, 0xdf, 0xe2, 0x74, 0xe7, 0xa2,
-	0xd4, 0xc4, 0x92, 0x54, 0xef, 0xca, 0x64, 0x21, 0x09, 0x2e, 0xf6, 0x64, 0x10, 0x27, 0xbf, 0x48,
-	0x82, 0x51, 0x81, 0x51, 0x83, 0x33, 0x08, 0xc6, 0x15, 0x12, 0xe1, 0x62, 0xcd, 0xcc, 0x4b, 0x49,
-	0xad, 0x90, 0x60, 0x02, 0x8b, 0x43, 0x38, 0x20, 0xf5, 0x89, 0x29, 0x29, 0x45, 0xa9, 0xc5, 0xc5,
-	0x12, 0xcc, 0x10, 0xf5, 0x50, 0xae, 0x92, 0x18, 0x97, 0x08, 0xb2, 0xc9, 0x41, 0xa9, 0xc5, 0x05,
-	0xf9, 0x79, 0xc5, 0xa9, 0x50, 0x1b, 0x43, 0x0b, 0x52, 0x68, 0x64, 0x23, 0xdc, 0x64, 0xb8, 0x8d,
-	0x76, 0x60, 0x1b, 0x5d, 0x52, 0x73, 0x52, 0xc9, 0xb2, 0x11, 0x6a, 0x2e, 0x5c, 0x3f, 0xdc, 0x5c,
-	0x67, 0x2e, 0x5e, 0x64, 0x1f, 0x1a, 0xe1, 0x31, 0x18, 0xc9, 0xd1, 0x4c, 0xa8, 0x8e, 0x16, 0xe7,
-	0x12, 0x45, 0x31, 0x04, 0xcd, 0x74, 0xb8, 0x6f, 0x28, 0x31, 0x1d, 0x61, 0x08, 0x9a, 0xe9, 0x70,
-	0x3f, 0x51, 0x62, 0x3a, 0xc2, 0x10, 0x98, 0xe9, 0x46, 0x33, 0x58, 0xb8, 0x98, 0x7d, 0x8b, 0xd3,
-	0x85, 0x42, 0xb9, 0x38, 0x11, 0x49, 0x4b, 0x5e, 0x0f, 0x23, 0xe9, 0xea, 0x21, 0x7b, 0x5d, 0x4a,
-	0x9d, 0x80, 0x02, 0x98, 0xf1, 0x20, 0x63, 0x11, 0xe9, 0x07, 0x87, 0xb1, 0x70, 0x05, 0xb8, 0x8c,
-	0xc5, 0x48, 0x27, 0x20, 0x63, 0x11, 0x89, 0x04, 0x87, 0xb1, 0x70, 0x05, 0xb8, 0x8c, 0xc5, 0x48,
-	0x26, 0x42, 0x11, 0x5c, 0x5c, 0x48, 0x69, 0x44, 0x81, 0x80, 0x27, 0x8d, 0xa4, 0x34, 0x08, 0xa9,
-	0x40, 0x36, 0x19, 0x29, 0x7d, 0x28, 0x10, 0xf0, 0x27, 0x4e, 0x93, 0x31, 0x93, 0x07, 0xc8, 0x64,
-	0xa4, 0xb4, 0xa1, 0x40, 0xc0, 0xab, 0x38, 0x4d, 0xc6, 0x4c, 0x1a, 0x4e, 0xc6, 0x27, 0x1e, 0xc9,
-	0x31, 0x5e, 0x78, 0x24, 0xc7, 0xf8, 0xe0, 0x91, 0x1c, 0xe3, 0x84, 0xc7, 0x72, 0x0c, 0x17, 0x1e,
-	0xcb, 0x31, 0xdc, 0x78, 0x2c, 0xc7, 0x10, 0x25, 0x09, 0x2f, 0xa0, 0x2a, 0x90, 0xca, 0xbd, 0xca,
-	0x82, 0xd4, 0xe2, 0x24, 0x36, 0x70, 0x61, 0x65, 0x0c, 0x08, 0x00, 0x00, 0xff, 0xff, 0x86, 0x18,
-	0x2b, 0xb0, 0x19, 0x05, 0x00, 0x00,
+	// 431 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xb4, 0x95, 0xc1, 0x4e, 0xea, 0x40,
+	0x14, 0x86, 0x29, 0xe4, 0x72, 0x2f, 0x93, 0x7b, 0x17, 0xb7, 0x41, 0xad, 0x35, 0xd6, 0x86, 0x8d,
+	0xac, 0x6a, 0xd2, 0xb3, 0x77, 0x21, 0xee, 0x0c, 0x1b, 0x12, 0x12, 0x74, 0x63, 0xa0, 0x1d, 0x09,
+	0x91, 0xd0, 0xa6, 0x83, 0x06, 0xde, 0xc2, 0xa7, 0xf0, 0x59, 0x5c, 0xb2, 0x74, 0x69, 0xe0, 0x45,
+	0x4c, 0x5b, 0x7a, 0x3a, 0x6d, 0x19, 0x26, 0x01, 0xdc, 0xf5, 0xcc, 0xfc, 0x7c, 0x67, 0xce, 0x3f,
+	0xf9, 0x19, 0xa2, 0x0f, 0xe8, 0xf8, 0x29, 0x18, 0x39, 0xec, 0x0a, 0x3f, 0xa6, 0x33, 0xcb, 0x0f,
+	0xbc, 0xa9, 0xa7, 0xfe, 0x4f, 0x96, 0xac, 0xe4, 0x43, 0x3f, 0x2b, 0xca, 0x9f, 0xe7, 0x4e, 0xac,
+	0xd7, 0xcf, 0x37, 0x6e, 0x3e, 0xda, 0xdb, 0xb7, 0x21, 0xde, 0x6e, 0xf4, 0xc8, 0xdf, 0x36, 0x1b,
+	0xb6, 0x02, 0xda, 0x9f, 0xd2, 0xbb, 0xb9, 0xa3, 0x6a, 0xe4, 0xb7, 0x13, 0x16, 0x5e, 0xa0, 0x29,
+	0xa6, 0xd2, 0xac, 0x75, 0x92, 0x52, 0xad, 0x93, 0x5f, 0xa3, 0x89, 0x4b, 0x67, 0x5a, 0x39, 0x5a,
+	0x8f, 0x8b, 0x50, 0xdf, 0x77, 0xdd, 0x80, 0x32, 0xa6, 0x55, 0x62, 0xfd, 0xba, 0x6c, 0x1c, 0x93,
+	0x3a, 0x4f, 0xee, 0x50, 0xe6, 0x7b, 0x13, 0x46, 0xd7, 0x1d, 0xbb, 0xbe, 0xfb, 0x43, 0x1d, 0x91,
+	0x8c, 0x1d, 0xaf, 0xa3, 0x8e, 0xb7, 0x74, 0x4c, 0x77, 0xea, 0xb8, 0xe6, 0xe2, 0xef, 0x91, 0xdb,
+	0x22, 0xff, 0xf8, 0x09, 0xed, 0x2d, 0x60, 0xee, 0xd0, 0xe5, 0xec, 0xa1, 0x4f, 0xc8, 0x51, 0x06,
+	0x92, 0xa3, 0xe3, 0x34, 0xfb, 0xd0, 0x53, 0x48, 0x8e, 0x8e, 0x33, 0xed, 0x43, 0x4f, 0x21, 0x48,
+	0xbf, 0xcf, 0x3a, 0x03, 0xbb, 0xd0, 0xc3, 0xcb, 0x78, 0xed, 0x8f, 0x5f, 0x68, 0x74, 0xcd, 0x7f,
+	0x3a, 0x71, 0x91, 0xf7, 0x0b, 0x72, 0x3d, 0x71, 0xd4, 0xc3, 0xf7, 0x4c, 0xd1, 0x22, 0x17, 0xe1,
+	0x10, 0x2e, 0x22, 0xdd, 0x7e, 0xaf, 0x92, 0x4a, 0x9b, 0x0d, 0xd5, 0x2e, 0xa9, 0xa5, 0x01, 0xbd,
+	0xb0, 0x0a, 0xff, 0x0f, 0x16, 0x6f, 0x88, 0x7e, 0x29, 0x11, 0x24, 0xf8, 0x10, 0x9b, 0xa6, 0x50,
+	0x80, 0x45, 0x81, 0x08, 0x5b, 0x48, 0x5b, 0x88, 0x4d, 0xa3, 0x26, 0xc0, 0xa2, 0x40, 0x84, 0x2d,
+	0x84, 0x4d, 0xed, 0x11, 0xc2, 0x25, 0xcd, 0x94, 0x0c, 0x69, 0xeb, 0x4d, 0x99, 0x82, 0x27, 0x73,
+	0x29, 0x33, 0x25, 0x73, 0x0a, 0xc9, 0xc5, 0x90, 0x85, 0x64, 0x2e, 0x61, 0xa6, 0x64, 0x54, 0x21,
+	0xb9, 0x18, 0xb0, 0x8c, 0x1b, 0x20, 0x75, 0x03, 0xa4, 0x6e, 0xc0, 0x46, 0x37, 0x40, 0xea, 0x06,
+	0x48, 0xdd, 0x80, 0x8d, 0x6e, 0x80, 0xd4, 0x0d, 0x90, 0xba, 0x81, 0xe4, 0x1b, 0xf8, 0x58, 0x1a,
+	0xca, 0x62, 0x69, 0x28, 0x5f, 0x4b, 0x43, 0x79, 0x5b, 0x19, 0xa5, 0xc5, 0xca, 0x28, 0x7d, 0xae,
+	0x8c, 0xd2, 0xc3, 0x29, 0x3e, 0x7a, 0x33, 0xee, 0xa9, 0x9d, 0xfb, 0x94, 0x0d, 0xaa, 0xd1, 0x03,
+	0x08, 0xdf, 0x01, 0x00, 0x00, 0xff, 0xff, 0x71, 0xbd, 0x57, 0xa2, 0x8c, 0x07, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -633,6 +923,9 @@ type MsgClient interface {
 	CreateKyc2(ctx context.Context, in *MsgCreateKyc2, opts ...grpc.CallOption) (*MsgCreateKyc2Response, error)
 	UpdateKyc2(ctx context.Context, in *MsgUpdateKyc2, opts ...grpc.CallOption) (*MsgUpdateKyc2Response, error)
 	DeleteKyc2(ctx context.Context, in *MsgDeleteKyc2, opts ...grpc.CallOption) (*MsgDeleteKyc2Response, error)
+	CreateKyc3(ctx context.Context, in *MsgCreateKyc3, opts ...grpc.CallOption) (*MsgCreateKyc3Response, error)
+	UpdateKyc3(ctx context.Context, in *MsgUpdateKyc3, opts ...grpc.CallOption) (*MsgUpdateKyc3Response, error)
+	DeleteKyc3(ctx context.Context, in *MsgDeleteKyc3, opts ...grpc.CallOption) (*MsgDeleteKyc3Response, error)
 }
 
 type msgClient struct {
@@ -697,6 +990,33 @@ func (c *msgClient) DeleteKyc2(ctx context.Context, in *MsgDeleteKyc2, opts ...g
 	return out, nil
 }
 
+func (c *msgClient) CreateKyc3(ctx context.Context, in *MsgCreateKyc3, opts ...grpc.CallOption) (*MsgCreateKyc3Response, error) {
+	out := new(MsgCreateKyc3Response)
+	err := c.cc.Invoke(ctx, "/belfrics.belfrics.Msg/CreateKyc3", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *msgClient) UpdateKyc3(ctx context.Context, in *MsgUpdateKyc3, opts ...grpc.CallOption) (*MsgUpdateKyc3Response, error) {
+	out := new(MsgUpdateKyc3Response)
+	err := c.cc.Invoke(ctx, "/belfrics.belfrics.Msg/UpdateKyc3", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *msgClient) DeleteKyc3(ctx context.Context, in *MsgDeleteKyc3, opts ...grpc.CallOption) (*MsgDeleteKyc3Response, error) {
+	out := new(MsgDeleteKyc3Response)
+	err := c.cc.Invoke(ctx, "/belfrics.belfrics.Msg/DeleteKyc3", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MsgServer is the server API for Msg service.
 type MsgServer interface {
 	CreateKyc(context.Context, *MsgCreateKyc) (*MsgCreateKycResponse, error)
@@ -705,6 +1025,9 @@ type MsgServer interface {
 	CreateKyc2(context.Context, *MsgCreateKyc2) (*MsgCreateKyc2Response, error)
 	UpdateKyc2(context.Context, *MsgUpdateKyc2) (*MsgUpdateKyc2Response, error)
 	DeleteKyc2(context.Context, *MsgDeleteKyc2) (*MsgDeleteKyc2Response, error)
+	CreateKyc3(context.Context, *MsgCreateKyc3) (*MsgCreateKyc3Response, error)
+	UpdateKyc3(context.Context, *MsgUpdateKyc3) (*MsgUpdateKyc3Response, error)
+	DeleteKyc3(context.Context, *MsgDeleteKyc3) (*MsgDeleteKyc3Response, error)
 }
 
 // UnimplementedMsgServer can be embedded to have forward compatible implementations.
@@ -728,6 +1051,15 @@ func (*UnimplementedMsgServer) UpdateKyc2(ctx context.Context, req *MsgUpdateKyc
 }
 func (*UnimplementedMsgServer) DeleteKyc2(ctx context.Context, req *MsgDeleteKyc2) (*MsgDeleteKyc2Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteKyc2 not implemented")
+}
+func (*UnimplementedMsgServer) CreateKyc3(ctx context.Context, req *MsgCreateKyc3) (*MsgCreateKyc3Response, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateKyc3 not implemented")
+}
+func (*UnimplementedMsgServer) UpdateKyc3(ctx context.Context, req *MsgUpdateKyc3) (*MsgUpdateKyc3Response, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateKyc3 not implemented")
+}
+func (*UnimplementedMsgServer) DeleteKyc3(ctx context.Context, req *MsgDeleteKyc3) (*MsgDeleteKyc3Response, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteKyc3 not implemented")
 }
 
 func RegisterMsgServer(s grpc1.Server, srv MsgServer) {
@@ -842,6 +1174,60 @@ func _Msg_DeleteKyc2_Handler(srv interface{}, ctx context.Context, dec func(inte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Msg_CreateKyc3_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(MsgCreateKyc3)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MsgServer).CreateKyc3(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/belfrics.belfrics.Msg/CreateKyc3",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MsgServer).CreateKyc3(ctx, req.(*MsgCreateKyc3))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Msg_UpdateKyc3_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(MsgUpdateKyc3)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MsgServer).UpdateKyc3(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/belfrics.belfrics.Msg/UpdateKyc3",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MsgServer).UpdateKyc3(ctx, req.(*MsgUpdateKyc3))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Msg_DeleteKyc3_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(MsgDeleteKyc3)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MsgServer).DeleteKyc3(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/belfrics.belfrics.Msg/DeleteKyc3",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MsgServer).DeleteKyc3(ctx, req.(*MsgDeleteKyc3))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _Msg_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "belfrics.belfrics.Msg",
 	HandlerType: (*MsgServer)(nil),
@@ -869,6 +1255,18 @@ var _Msg_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "DeleteKyc2",
 			Handler:    _Msg_DeleteKyc2_Handler,
+		},
+		{
+			MethodName: "CreateKyc3",
+			Handler:    _Msg_CreateKyc3_Handler,
+		},
+		{
+			MethodName: "UpdateKyc3",
+			Handler:    _Msg_UpdateKyc3_Handler,
+		},
+		{
+			MethodName: "DeleteKyc3",
+			Handler:    _Msg_DeleteKyc3_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
@@ -1249,6 +1647,206 @@ func (m *MsgDeleteKyc2Response) MarshalToSizedBuffer(dAtA []byte) (int, error) {
 	return len(dAtA) - i, nil
 }
 
+func (m *MsgCreateKyc3) Marshal() (dAtA []byte, err error) {
+	size := m.Size()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *MsgCreateKyc3) MarshalTo(dAtA []byte) (int, error) {
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *MsgCreateKyc3) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if m.Value {
+		i--
+		if m.Value {
+			dAtA[i] = 1
+		} else {
+			dAtA[i] = 0
+		}
+		i--
+		dAtA[i] = 0x18
+	}
+	if len(m.Address) > 0 {
+		i -= len(m.Address)
+		copy(dAtA[i:], m.Address)
+		i = encodeVarintTx(dAtA, i, uint64(len(m.Address)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if len(m.Creator) > 0 {
+		i -= len(m.Creator)
+		copy(dAtA[i:], m.Creator)
+		i = encodeVarintTx(dAtA, i, uint64(len(m.Creator)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
+}
+
+func (m *MsgCreateKyc3Response) Marshal() (dAtA []byte, err error) {
+	size := m.Size()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *MsgCreateKyc3Response) MarshalTo(dAtA []byte) (int, error) {
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *MsgCreateKyc3Response) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	return len(dAtA) - i, nil
+}
+
+func (m *MsgUpdateKyc3) Marshal() (dAtA []byte, err error) {
+	size := m.Size()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *MsgUpdateKyc3) MarshalTo(dAtA []byte) (int, error) {
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *MsgUpdateKyc3) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if m.Value {
+		i--
+		if m.Value {
+			dAtA[i] = 1
+		} else {
+			dAtA[i] = 0
+		}
+		i--
+		dAtA[i] = 0x18
+	}
+	if len(m.Address) > 0 {
+		i -= len(m.Address)
+		copy(dAtA[i:], m.Address)
+		i = encodeVarintTx(dAtA, i, uint64(len(m.Address)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if len(m.Creator) > 0 {
+		i -= len(m.Creator)
+		copy(dAtA[i:], m.Creator)
+		i = encodeVarintTx(dAtA, i, uint64(len(m.Creator)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
+}
+
+func (m *MsgUpdateKyc3Response) Marshal() (dAtA []byte, err error) {
+	size := m.Size()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *MsgUpdateKyc3Response) MarshalTo(dAtA []byte) (int, error) {
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *MsgUpdateKyc3Response) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	return len(dAtA) - i, nil
+}
+
+func (m *MsgDeleteKyc3) Marshal() (dAtA []byte, err error) {
+	size := m.Size()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *MsgDeleteKyc3) MarshalTo(dAtA []byte) (int, error) {
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *MsgDeleteKyc3) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	if len(m.Address) > 0 {
+		i -= len(m.Address)
+		copy(dAtA[i:], m.Address)
+		i = encodeVarintTx(dAtA, i, uint64(len(m.Address)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if len(m.Creator) > 0 {
+		i -= len(m.Creator)
+		copy(dAtA[i:], m.Creator)
+		i = encodeVarintTx(dAtA, i, uint64(len(m.Creator)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
+}
+
+func (m *MsgDeleteKyc3Response) Marshal() (dAtA []byte, err error) {
+	size := m.Size()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *MsgDeleteKyc3Response) MarshalTo(dAtA []byte) (int, error) {
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *MsgDeleteKyc3Response) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
+	_ = i
+	var l int
+	_ = l
+	return len(dAtA) - i, nil
+}
+
 func encodeVarintTx(dAtA []byte, offset int, v uint64) int {
 	offset -= sovTx(v)
 	base := offset
@@ -1416,6 +2014,90 @@ func (m *MsgDeleteKyc2) Size() (n int) {
 }
 
 func (m *MsgDeleteKyc2Response) Size() (n int) {
+	if m == nil {
+		return 0
+	}
+	var l int
+	_ = l
+	return n
+}
+
+func (m *MsgCreateKyc3) Size() (n int) {
+	if m == nil {
+		return 0
+	}
+	var l int
+	_ = l
+	l = len(m.Creator)
+	if l > 0 {
+		n += 1 + l + sovTx(uint64(l))
+	}
+	l = len(m.Address)
+	if l > 0 {
+		n += 1 + l + sovTx(uint64(l))
+	}
+	if m.Value {
+		n += 2
+	}
+	return n
+}
+
+func (m *MsgCreateKyc3Response) Size() (n int) {
+	if m == nil {
+		return 0
+	}
+	var l int
+	_ = l
+	return n
+}
+
+func (m *MsgUpdateKyc3) Size() (n int) {
+	if m == nil {
+		return 0
+	}
+	var l int
+	_ = l
+	l = len(m.Creator)
+	if l > 0 {
+		n += 1 + l + sovTx(uint64(l))
+	}
+	l = len(m.Address)
+	if l > 0 {
+		n += 1 + l + sovTx(uint64(l))
+	}
+	if m.Value {
+		n += 2
+	}
+	return n
+}
+
+func (m *MsgUpdateKyc3Response) Size() (n int) {
+	if m == nil {
+		return 0
+	}
+	var l int
+	_ = l
+	return n
+}
+
+func (m *MsgDeleteKyc3) Size() (n int) {
+	if m == nil {
+		return 0
+	}
+	var l int
+	_ = l
+	l = len(m.Creator)
+	if l > 0 {
+		n += 1 + l + sovTx(uint64(l))
+	}
+	l = len(m.Address)
+	if l > 0 {
+		n += 1 + l + sovTx(uint64(l))
+	}
+	return n
+}
+
+func (m *MsgDeleteKyc3Response) Size() (n int) {
 	if m == nil {
 		return 0
 	}
@@ -2455,6 +3137,538 @@ func (m *MsgDeleteKyc2Response) Unmarshal(dAtA []byte) error {
 		}
 		if fieldNum <= 0 {
 			return fmt.Errorf("proto: MsgDeleteKyc2Response: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		default:
+			iNdEx = preIndex
+			skippy, err := skipTx(dAtA[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if (skippy < 0) || (iNdEx+skippy) < 0 {
+				return ErrInvalidLengthTx
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += skippy
+		}
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
+}
+func (m *MsgCreateKyc3) Unmarshal(dAtA []byte) error {
+	l := len(dAtA)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowTx
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := dAtA[iNdEx]
+			iNdEx++
+			wire |= uint64(b&0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: MsgCreateKyc3: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: MsgCreateKyc3: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		case 1:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Creator", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowTx
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthTx
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return ErrInvalidLengthTx
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.Creator = string(dAtA[iNdEx:postIndex])
+			iNdEx = postIndex
+		case 2:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Address", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowTx
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthTx
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return ErrInvalidLengthTx
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.Address = string(dAtA[iNdEx:postIndex])
+			iNdEx = postIndex
+		case 3:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Value", wireType)
+			}
+			var v int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowTx
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				v |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			m.Value = bool(v != 0)
+		default:
+			iNdEx = preIndex
+			skippy, err := skipTx(dAtA[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if (skippy < 0) || (iNdEx+skippy) < 0 {
+				return ErrInvalidLengthTx
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += skippy
+		}
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
+}
+func (m *MsgCreateKyc3Response) Unmarshal(dAtA []byte) error {
+	l := len(dAtA)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowTx
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := dAtA[iNdEx]
+			iNdEx++
+			wire |= uint64(b&0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: MsgCreateKyc3Response: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: MsgCreateKyc3Response: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		default:
+			iNdEx = preIndex
+			skippy, err := skipTx(dAtA[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if (skippy < 0) || (iNdEx+skippy) < 0 {
+				return ErrInvalidLengthTx
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += skippy
+		}
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
+}
+func (m *MsgUpdateKyc3) Unmarshal(dAtA []byte) error {
+	l := len(dAtA)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowTx
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := dAtA[iNdEx]
+			iNdEx++
+			wire |= uint64(b&0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: MsgUpdateKyc3: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: MsgUpdateKyc3: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		case 1:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Creator", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowTx
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthTx
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return ErrInvalidLengthTx
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.Creator = string(dAtA[iNdEx:postIndex])
+			iNdEx = postIndex
+		case 2:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Address", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowTx
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthTx
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return ErrInvalidLengthTx
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.Address = string(dAtA[iNdEx:postIndex])
+			iNdEx = postIndex
+		case 3:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Value", wireType)
+			}
+			var v int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowTx
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				v |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			m.Value = bool(v != 0)
+		default:
+			iNdEx = preIndex
+			skippy, err := skipTx(dAtA[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if (skippy < 0) || (iNdEx+skippy) < 0 {
+				return ErrInvalidLengthTx
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += skippy
+		}
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
+}
+func (m *MsgUpdateKyc3Response) Unmarshal(dAtA []byte) error {
+	l := len(dAtA)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowTx
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := dAtA[iNdEx]
+			iNdEx++
+			wire |= uint64(b&0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: MsgUpdateKyc3Response: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: MsgUpdateKyc3Response: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		default:
+			iNdEx = preIndex
+			skippy, err := skipTx(dAtA[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if (skippy < 0) || (iNdEx+skippy) < 0 {
+				return ErrInvalidLengthTx
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += skippy
+		}
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
+}
+func (m *MsgDeleteKyc3) Unmarshal(dAtA []byte) error {
+	l := len(dAtA)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowTx
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := dAtA[iNdEx]
+			iNdEx++
+			wire |= uint64(b&0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: MsgDeleteKyc3: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: MsgDeleteKyc3: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		case 1:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Creator", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowTx
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthTx
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return ErrInvalidLengthTx
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.Creator = string(dAtA[iNdEx:postIndex])
+			iNdEx = postIndex
+		case 2:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Address", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowTx
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				stringLen |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthTx
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex < 0 {
+				return ErrInvalidLengthTx
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.Address = string(dAtA[iNdEx:postIndex])
+			iNdEx = postIndex
+		default:
+			iNdEx = preIndex
+			skippy, err := skipTx(dAtA[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if (skippy < 0) || (iNdEx+skippy) < 0 {
+				return ErrInvalidLengthTx
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += skippy
+		}
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
+}
+func (m *MsgDeleteKyc3Response) Unmarshal(dAtA []byte) error {
+	l := len(dAtA)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowTx
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := dAtA[iNdEx]
+			iNdEx++
+			wire |= uint64(b&0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: MsgDeleteKyc3Response: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: MsgDeleteKyc3Response: illegal tag %d (wire type %d)", fieldNum, wire)
 		}
 		switch fieldNum {
 		default:

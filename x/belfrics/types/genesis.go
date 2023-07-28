@@ -12,6 +12,7 @@ func DefaultGenesis() *GenesisState {
 	return &GenesisState{
 		KycList:  []Kyc{},
 		Kyc2List: []Kyc2{},
+		Kyc3List: []Kyc3{},
 		// this line is used by starport scaffolding # genesis/types/default
 		Params: DefaultParams(),
 	}
@@ -39,6 +40,16 @@ func (gs GenesisState) Validate() error {
 			return fmt.Errorf("duplicated index for kyc2")
 		}
 		kyc2IndexMap[index] = struct{}{}
+	}
+	// Check for duplicated index in kyc3
+	kyc3IndexMap := make(map[string]struct{})
+
+	for _, elem := range gs.Kyc3List {
+		index := string(Kyc3Key(elem.Address))
+		if _, ok := kyc3IndexMap[index]; ok {
+			return fmt.Errorf("duplicated index for kyc3")
+		}
+		kyc3IndexMap[index] = struct{}{}
 	}
 	// this line is used by starport scaffolding # genesis/types/validate
 

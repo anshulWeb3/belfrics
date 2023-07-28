@@ -16,6 +16,10 @@ func InitGenesis(ctx sdk.Context, k keeper.Keeper, genState types.GenesisState) 
 	for _, elem := range genState.Kyc2List {
 		k.SetKyc2(ctx, elem)
 	}
+	// Set all the kyc3
+	for _, elem := range genState.Kyc3List {
+		k.SetKyc3(ctx, elem)
+	}
 	// this line is used by starport scaffolding # genesis/module/init
 	k.SetParams(ctx, genState.Params)
 }
@@ -27,6 +31,7 @@ func ExportGenesis(ctx sdk.Context, k keeper.Keeper) *types.GenesisState {
 
 	genesis.KycList = k.GetAllKyc(ctx)
 	genesis.Kyc2List = k.GetAllKyc2(ctx)
+	genesis.Kyc3List = k.GetAllKyc3(ctx)
 	// this line is used by starport scaffolding # genesis/module/export
 
 	return genesis

@@ -36,6 +36,18 @@ const (
 	// TODO: Determine the simulation weight value
 	defaultWeightMsgDeleteKyc2 int = 100
 
+	opWeightMsgCreateKyc3 = "op_weight_msg_kyc_3"
+	// TODO: Determine the simulation weight value
+	defaultWeightMsgCreateKyc3 int = 100
+
+	opWeightMsgUpdateKyc3 = "op_weight_msg_kyc_3"
+	// TODO: Determine the simulation weight value
+	defaultWeightMsgUpdateKyc3 int = 100
+
+	opWeightMsgDeleteKyc3 = "op_weight_msg_kyc_3"
+	// TODO: Determine the simulation weight value
+	defaultWeightMsgDeleteKyc3 int = 100
+
 	// this line is used by starport scaffolding # simapp/module/const
 )
 
@@ -48,6 +60,16 @@ func (AppModule) GenerateGenesisState(simState *module.SimulationState) {
 	belfricsGenesis := types.GenesisState{
 		Params: types.DefaultParams(),
 		Kyc2List: []types.Kyc2{
+			{
+				Creator: sample.AccAddress(),
+				Address: "0",
+			},
+			{
+				Creator: sample.AccAddress(),
+				Address: "1",
+			},
+		},
+		Kyc3List: []types.Kyc3{
 			{
 				Creator: sample.AccAddress(),
 				Address: "0",
@@ -111,6 +133,39 @@ func (am AppModule) WeightedOperations(simState module.SimulationState) []simtyp
 	operations = append(operations, simulation.NewWeightedOperation(
 		weightMsgDeleteKyc2,
 		belfricssimulation.SimulateMsgDeleteKyc2(am.accountKeeper, am.bankKeeper, am.keeper),
+	))
+
+	var weightMsgCreateKyc3 int
+	simState.AppParams.GetOrGenerate(simState.Cdc, opWeightMsgCreateKyc3, &weightMsgCreateKyc3, nil,
+		func(_ *rand.Rand) {
+			weightMsgCreateKyc3 = defaultWeightMsgCreateKyc3
+		},
+	)
+	operations = append(operations, simulation.NewWeightedOperation(
+		weightMsgCreateKyc3,
+		belfricssimulation.SimulateMsgCreateKyc3(am.accountKeeper, am.bankKeeper, am.keeper),
+	))
+
+	var weightMsgUpdateKyc3 int
+	simState.AppParams.GetOrGenerate(simState.Cdc, opWeightMsgUpdateKyc3, &weightMsgUpdateKyc3, nil,
+		func(_ *rand.Rand) {
+			weightMsgUpdateKyc3 = defaultWeightMsgUpdateKyc3
+		},
+	)
+	operations = append(operations, simulation.NewWeightedOperation(
+		weightMsgUpdateKyc3,
+		belfricssimulation.SimulateMsgUpdateKyc3(am.accountKeeper, am.bankKeeper, am.keeper),
+	))
+
+	var weightMsgDeleteKyc3 int
+	simState.AppParams.GetOrGenerate(simState.Cdc, opWeightMsgDeleteKyc3, &weightMsgDeleteKyc3, nil,
+		func(_ *rand.Rand) {
+			weightMsgDeleteKyc3 = defaultWeightMsgDeleteKyc3
+		},
+	)
+	operations = append(operations, simulation.NewWeightedOperation(
+		weightMsgDeleteKyc3,
+		belfricssimulation.SimulateMsgDeleteKyc3(am.accountKeeper, am.bankKeeper, am.keeper),
 	))
 
 	// this line is used by starport scaffolding # simapp/module/operation

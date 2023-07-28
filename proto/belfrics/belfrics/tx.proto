@@ -4,6 +4,7 @@ package belfrics.belfrics;
 
 import "belfrics/belfrics/kyc.proto";
 import "belfrics/belfrics/kyc_2.proto";
+import "belfrics/belfrics/kyc_3.proto";
 
 option go_package = "belfrics/x/belfrics/types";
 
@@ -15,6 +16,9 @@ service Msg {
   rpc CreateKyc2 (MsgCreateKyc2) returns (MsgCreateKyc2Response);
   rpc UpdateKyc2 (MsgUpdateKyc2) returns (MsgUpdateKyc2Response);
   rpc DeleteKyc2 (MsgDeleteKyc2) returns (MsgDeleteKyc2Response);
+  rpc CreateKyc3 (MsgCreateKyc3) returns (MsgCreateKyc3Response);
+  rpc UpdateKyc3 (MsgUpdateKyc3) returns (MsgUpdateKyc3Response);
+  rpc DeleteKyc3 (MsgDeleteKyc3) returns (MsgDeleteKyc3Response);
 }
 message MsgCreateKyc {
   string creator = 1;
@@ -59,4 +63,27 @@ message MsgDeleteKyc2 {
 }
 
 message MsgDeleteKyc2Response {}
+
+message MsgCreateKyc3 {
+  string creator = 1;
+  string address = 2;
+  bool   value   = 3;
+}
+
+message MsgCreateKyc3Response {}
+
+message MsgUpdateKyc3 {
+  string creator = 1;
+  string address = 2;
+  bool   value   = 3;
+}
+
+message MsgUpdateKyc3Response {}
+
+message MsgDeleteKyc3 {
+  string creator = 1;
+  string address = 2;
+}
+
+message MsgDeleteKyc3Response {}
 
