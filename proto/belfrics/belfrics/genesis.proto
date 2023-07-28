@@ -1,0 +1,12 @@
+syntax = "proto3";
+package belfrics.belfrics;
+
+import "gogoproto/gogo.proto";
+import "belfrics/belfrics/params.proto";
+
+option go_package = "belfrics/x/belfrics/types";
+
+// GenesisState defines the belfrics module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
