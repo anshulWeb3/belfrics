@@ -1,0 +1,11 @@
+syntax = "proto3";
+package belfrics.belfrics;
+
+option go_package = "belfrics/x/belfrics/types";
+
+message Kyc {
+  string index = 1; 
+  string address = 2; 
+  string creator = 3;
+}
+

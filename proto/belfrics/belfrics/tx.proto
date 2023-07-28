@@ -1,7 +1,37 @@
 syntax = "proto3";
+
 package belfrics.belfrics;
+
+import "belfrics/belfrics/kyc.proto";
 
 option go_package = "belfrics/x/belfrics/types";
 
 // Msg defines the Msg service.
-service Msg {}
+service Msg {
+  rpc CreateKyc (MsgCreateKyc) returns (MsgCreateKycResponse);
+  rpc UpdateKyc (MsgUpdateKyc) returns (MsgUpdateKycResponse);
+  rpc DeleteKyc (MsgDeleteKyc) returns (MsgDeleteKycResponse);
+}
+message MsgCreateKyc {
+  string creator = 1;
+  string index   = 2;
+  string address = 3;
+}
+
+message MsgCreateKycResponse {}
+
+message MsgUpdateKyc {
+  string creator = 1;
+  string index   = 2;
+  string address = 3;
+}
+
+message MsgUpdateKycResponse {}
+
+message MsgDeleteKyc {
+  string creator = 1;
+  string index   = 2;
+}
+
+message MsgDeleteKycResponse {}
+
